@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="./popup.js"></script>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <div class="table-responsive">
+        <button class="bg-success" id="startBtn">Start</button>
+        <button class="bg-danger" id="stopBtn">Stop</button>
+        <table class="table" id="userTable">
+            <caption>List of users</caption>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" id="name">Name</th>
+                    <th scope="col" id="last_name">Last Name</th>
+                    <th scope="col" id="father_name">Father Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td data-id="name">Emmanuel</td>
+                    <td data-id="last_name">Saleem</td>
+                    <td data-id="father_name">Father Name</td>
+                </tr>
+                <!-- Additional table rows here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

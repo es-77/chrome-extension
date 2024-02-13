@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Table Data Sender",
+    "version": "1.0",
+    "description": "Send table data to a backend endpoint",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icons8-website-50.png",
+            "48": "images/icons8-website-50.png",
+            "128": "images/icons8-website-50.png"
+        }
+    },
+    "icons": {
+        "16": "images/icons8-website-50.png",
+        "48": "images/icons8-website-50.png",
+        "128": "images/icons8-website-50.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}

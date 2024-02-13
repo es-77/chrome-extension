@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Table Data</title>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>30</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Emily</td>
+      <td>25</td>
+      <td>UK</td>
+    </tr>
+  </tbody>
+</table>
+
+<button>Get Table Data</button>
+
+<script>
+document.querySelector('button').addEventListener('click', function() {
+  var table = document.querySelector('table');
+  var headers = [];
+  var data = [];
+  var headerRow = table.querySelector('thead tr');
+  var headerCells = headerRow.querySelectorAll('th');
+  headerCells.forEach(function(cell) {
+    headers.push(cell.textContent);
+  });
+  var rows = table.querySelectorAll('tbody tr');
+  rows.forEach(function(row) {
+    var rowData = {};
+    var cells = row.querySelectorAll('td');
+    cells.forEach(function(cell, index) {
+      rowData[headers[index]] = cell.textContent;
+    });
+    data.push(rowData);
+  });
+
+  console.log(data);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "name": "Tab timer",
+    "description": "description of my extension",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "./popup.html"
+    },
+    "background": {
+        "service_worker": "./backgroundPage.js"
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://datatables.net/examples/data_sources/dom.html",
+        "https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table3",
+        "https://datatables.net/extensions/searchbuilder/examples/initialisation/html.html"
+    ]
+}

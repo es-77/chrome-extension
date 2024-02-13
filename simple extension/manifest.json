@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Table Data Sender",
+    "version": "1.0",
+    "description": "Send table data to a backend endpoint",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icons8-download-data-100.png",
+            "48": "images/icons8-download-data-100.png",
+            "128": "images/icons8-download-data-100.png"
+        }
+    },
+    "icons": {
+        "16": "images/icons8-download-data-100.png",
+        "48": "images/icons8-download-data-100.png",
+        "128": "images/icons8-download-data-100.png"
+    }
+}

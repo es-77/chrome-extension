@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Save Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1> Save Data</h1>
+     <section class='FlexContainer'>
+            <div>
+              <button id="sendDataBtn" class="btn bg_success">Send Data</button>
+              <button id="stopBtn" class="btn bg-danger">Stop</button>
+              <button id="table_data" class="btn ">table data get</button>
+            </div>
+            <div id="spinner_loader">
+                <div class="spinner-border text-success" role="status">
+                  <span class="sr-only"></span>
+              </div>
+            </div>
+            <div>
+              <span class="badge rounded-pill bg-success" id="request_total_send"></span>
+            </div>
+      </section>
+          <table class="table" id="userTable">
+            <caption>List of users</caption>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" id="image">Image</th>
+                    <th scope="col" id="name">Name</th>
+                    <th scope="col" id="last_name">Last Name</th>
+                    <th scope="col" id="father_name">Father Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td class="w-25" data-id="image">
+			                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-5.jpg" class="img-fluid img-thumbnail" alt="Sheep">
+		                </td>
+                    <td data-id="name">Emmanuel</td>
+                    <td data-id="last_name">Saleem</td>
+                    <td data-id="father_name">Father Name</td>
+                </tr>
+            </tbody>
+        </table>
+    <script src="popup.js"></script>
+  </body>
+</html>

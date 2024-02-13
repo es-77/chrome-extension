@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Table Data Extractor 222",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "images/downloads.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}

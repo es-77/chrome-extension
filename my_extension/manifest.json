@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "API Fetch Extension",
+    "version": "1.0",
+    "description": "Fetch data from an API on button click.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons8-website-50.png",
+            "48": "icons8-website-50.png",
+            "128": "icons8-website-50.png"
+        }
+    }
+}

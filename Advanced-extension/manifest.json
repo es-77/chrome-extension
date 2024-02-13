@@ -1,0 +1,20 @@
+{
+    "name": "download 123123",
+    "description": "description of my extension",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "./popup.html"
+    },
+    "background": {
+        "service_worker": "./backgroundPage.js"
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://datatables.net/extensions/searchbuilder/examples/initialisation/html.html"
+    ]
+}
