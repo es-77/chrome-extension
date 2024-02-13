@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                 
+<style>
+  .flex-container {
+    display: flex;
+    justify-content: center;  
+    flex-direction: column; 
+    flex-wrap: nowrap; 
+    align-content: center;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+
+  }
+
+  .flex-container > div{
+    border: 3px solid #ffcc80;
+    border-radius: 5px;
+    padding: 8px;
+  }
+
+  .item2 { 
+    flex-grow:222;
+    flex-shrink:1;
+    align-self:auto;
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item1 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+<div class="flex-container">
+    <div class="item1">
+        Sync Data To (Application Name)
+    </div>
+    <div class="item2">
+        <img src="icons8-play.gif" class="image_btn" id="send_data" alt="play"/>
+    </div>
+    <div class="item3">
+        <span id="request_send_count">count </span> <span id="request_send_count">Item's Synced</span>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        let isPlaying = false; 
+        const imageBtn = document.querySelector('.image_btn');
+        imageBtn.addEventListener('click', function(){
+            if (isPlaying) {
+                imageBtn.src = "icons8-play.gif";
+                imageBtn.alt = "play";
+                imageBtn.id = "send_data";
+                isPlaying = false;
+            } else {
+                imageBtn.src = "icons8-pausing-the-music-and-audio-button-on-an-application-96.png";
+                imageBtn.alt = "pause";
+                imageBtn.id = "stop_send_data";
+                isPlaying = true;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
