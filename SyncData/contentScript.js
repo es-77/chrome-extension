@@ -37,7 +37,7 @@ function sendData(data) {
 
     const chunks = chunkArray(data, 10);
     let perviousSendChunkRequest = 0;
-    chunks.forEach(chunk => {
+    chunks.forEach((chunk, index) => {
         const signal = abortController.signal;
         fetch('http://127.0.0.1:8000/api/save-user-data', {
             method: 'POST',
@@ -69,6 +69,11 @@ function sendData(data) {
             .catch(error => {
                 console.error('Error sending data:', error);
             });
+        if (chunks.length == index + 1) {
+            chrome.runtime.sendMessage(
+                { action: "total_chunk_action", total_chunk: 123, total_request: data.length }
+            )
+        }
     });
 }
 
@@ -103,8 +108,6 @@ chrome.runtime.sendMessage(
 
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-
-    sendResponse("Thank you sync data page");
     if (message.action === "send_data") {
         console.log(sendData(extractTableData()));
     }

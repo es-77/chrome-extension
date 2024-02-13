@@ -10,7 +10,5 @@ chrome.tabs.onActivated.addListener((tab) => {
 })
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log(message)
-    console.log(sender)
     sendResponse("hi sync data page")
 })
